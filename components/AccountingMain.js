@@ -63,48 +63,130 @@ const AccountingMain = () => {
 
         <Grid container spacing={3} mb={3}>
           <Grid item xs={12} md={3}>
-            <Card>
-              <CardContent>
-                <Box display="flex" alignItems="center" gap={1}>
-                  <IconTrendingUp color="green" />
-                  <Typography variant="h6">Total Income</Typography>
+            <Card sx={{ 
+              backgroundColor: '#f0fff4',
+              border: 'none',
+              boxShadow: 'none',
+              borderRadius: 2,
+              p: 1
+            }}>
+              <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 2, p: '16px !important' }}>
+                <Box sx={{ 
+                  backgroundColor: '#c6f6d5',
+                  borderRadius: '8px',
+                  p: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  minWidth: '40px',
+                  height: '40px'
+                }}>
+                  <Box sx={{ fontSize: '20px', color: '#38a169' }}>💰</Box>
                 </Box>
-                <Typography variant="h4" color="success.main">₹{totalIncome.toLocaleString()}</Typography>
+                <Box>
+                  <Typography variant="h4" sx={{ fontWeight: 'bold', color: '#1a202c', mb: 0.5 }}>
+                    ₹{totalIncome.toLocaleString()}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: '#718096', fontSize: '14px' }}>
+                    Total Income
+                  </Typography>
+                </Box>
               </CardContent>
             </Card>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Card>
-              <CardContent>
-                <Box display="flex" alignItems="center" gap={1}>
-                  <IconTrendingDown color="red" />
-                  <Typography variant="h6">Total Expenses</Typography>
+            <Card sx={{ 
+              backgroundColor: '#fff5f5',
+              border: 'none',
+              boxShadow: 'none',
+              borderRadius: 2,
+              p: 1
+            }}>
+              <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 2, p: '16px !important' }}>
+                <Box sx={{ 
+                  backgroundColor: '#fed7d7',
+                  borderRadius: '8px',
+                  p: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  minWidth: '40px',
+                  height: '40px'
+                }}>
+                  <Box sx={{ fontSize: '20px', color: '#e53e3e' }}>📉</Box>
                 </Box>
-                <Typography variant="h4" color="error.main">₹{totalExpenses.toLocaleString()}</Typography>
+                <Box>
+                  <Typography variant="h4" sx={{ fontWeight: 'bold', color: '#1a202c', mb: 0.5 }}>
+                    ₹{totalExpenses.toLocaleString()}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: '#718096', fontSize: '14px' }}>
+                    Total Expenses
+                  </Typography>
+                </Box>
               </CardContent>
             </Card>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Card>
-              <CardContent>
-                <Box display="flex" alignItems="center" gap={1}>
-                  <IconCreditCard />
-                  <Typography variant="h6">Net Profit</Typography>
+            <Card sx={{ 
+              backgroundColor: '#f8f9ff',
+              border: 'none',
+              boxShadow: 'none',
+              borderRadius: 2,
+              p: 1
+            }}>
+              <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 2, p: '16px !important' }}>
+                <Box sx={{ 
+                  backgroundColor: '#e8eaff',
+                  borderRadius: '8px',
+                  p: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  minWidth: '40px',
+                  height: '40px'
+                }}>
+                  <Box sx={{ fontSize: '20px', color: '#5a67d8' }}>📊</Box>
                 </Box>
-                <Typography variant="h4" color={netProfit >= 0 ? "success.main" : "error.main"}>
-                  ₹{netProfit.toLocaleString()}
-                </Typography>
+                <Box>
+                  <Typography variant="h4" sx={{ fontWeight: 'bold', color: netProfit >= 0 ? '#38a169' : '#e53e3e', mb: 0.5 }}>
+                    ₹{netProfit.toLocaleString()}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: '#718096', fontSize: '14px' }}>
+                    Net Profit
+                  </Typography>
+                </Box>
               </CardContent>
             </Card>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Card>
-              <CardContent>
-                <Box display="flex" alignItems="center" gap={1}>
-                  <IconReceipt />
-                  <Typography variant="h6">Transactions</Typography>
+            <Card sx={{ 
+              backgroundColor: '#fffbf0',
+              border: 'none',
+              boxShadow: 'none',
+              borderRadius: 2,
+              p: 1
+            }}>
+              <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 2, p: '16px !important' }}>
+                <Box sx={{ 
+                  backgroundColor: '#fed7aa',
+                  borderRadius: '8px',
+                  p: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  minWidth: '40px',
+                  height: '40px'
+                }}>
+                  <Box sx={{ fontSize: '20px', color: '#d69e2e' }}>📋</Box>
                 </Box>
-                <Typography variant="h4" color="primary">{transactions.length}</Typography>
+                <Box>
+                  <Typography variant="h4" sx={{ fontWeight: 'bold', color: '#1a202c', mb: 0.5 }}>
+                    {transactions.length}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: '#718096', fontSize: '14px' }}>
+                    Transactions
+                  </Typography>
+                </Box>
               </CardContent>
             </Card>
           </Grid>
